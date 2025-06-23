@@ -1,2 +1,5 @@
 # .starShift_files
-i create a new file type
+To add tools for working with .starShift files, run 'activate.sh'
+writing tool: starWrite. usage: starWrite -path "path" -text "text"
+reading tool: starRead. usage: starRead -path "path"
+
