@@ -6,6 +6,8 @@ new_path="$cleaned_path/files:$PATH"
 
 
 export PATH="$new_path"
+source ~/.bashrc
+
 
 
 if ! grep -q "export PATH=\"$cleaned_path/files:\$PATH\"" ~/.bashrc; then
