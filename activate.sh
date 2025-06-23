@@ -1,18 +1,24 @@
 #!/bin/bash
-current_path=$(pwd)
-cleaned_path=$(echo "$current_path" | sed 's|/activate.sh||g')
 
-new_path="$cleaned_path/files:$PATH"
+repo_path="$(dirname "$(realpath "$0")")"
+
+if [[ ":$PATH:" != *":$repo_path/files:"* ]]; then
+    echo "export PATH=\"$repo_path/files:\$PATH\"" >> ~/.bashrc
+    echo "✅ PATH added ~/.bashrc: $repo_path/files"
+fi
+
+if [ -d "$repo_path/files" ]; then
+    chmod +x "$repo_path/files"/*
+else
+    echo "❌files not found!"
+    exit 1
+fi
 
 
-export PATH="$new_path"
 source ~/.bashrc
 
 
-
-if ! grep -q "export PATH=\"$cleaned_path/files:\$PATH\"" ~/.bashrc; then
-    echo "export PATH=\"$cleaned_path/files:\$PATH\"" >> ~/.bashrc
-    echo "PATH added in ~/.bashrc"
+if [ -f "$repo_path/activate.sh" ]; then
+    rm -- "$repo_path/activate.sh"
 fi
 
-rm activate.sh
