@@ -1,11 +1,8 @@
 # .starShift_files
 
 git clone https://github.com/saniqP/.starShift_files.git
-
 cd .starShift_files
-
 chmod +x activate.sh
-
 ./activate.sh
 
 
