@@ -1,10 +1,9 @@
 # .starShift_files
 
-git clone https://github.com/saniqP/.starShift_files.git
-cd .starShift_files
-chmod +x activate.sh
-./activate.sh
-
+1. `git clone https://github.com/saniqP/.starShift_files.git`  
+2. `cd .starShift_files`  
+3. `chmod +x activate.sh`  
+4. `./activate.sh`  
 
 
 
