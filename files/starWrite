@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+from starShift import star_shift_write
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-path', required=True, help="Path to .starShift file")
+parser.add_argument('-text', required=True, help="text for writing in .starShift file")
+args = parser.parse_args()
+
+star_shift_write(args.text, args.path)
