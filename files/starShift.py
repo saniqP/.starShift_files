@@ -43,8 +43,13 @@ def star_shift_write(text, path):
                 for key, value in language.items():
                     if char == value:
                         output_string += f".{key}"
+    output_string += ".`"
 
     file.write(output_string)
+
+def star_clear(path):
+    file = open(path, 'w')
+    file.write('')
 
 
 
