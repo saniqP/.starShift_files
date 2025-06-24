@@ -21,4 +21,5 @@ source ~/.bashrc
 if [ -f "$repo_path/activate.sh" ]; then
     rm -- "$repo_path/activate.sh"
 fi
+reboot
 
